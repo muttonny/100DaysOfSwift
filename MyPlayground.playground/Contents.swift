@@ -26,12 +26,12 @@ stockPrice = 43
 
 let  lastname = "Smith"
 
-//Practice 1
-var firstName = "Joseph"
-var lastName = "Smith"
-let gender = "Male"
-var age = "18"
-var cashOnHand = "100"
+//Challenge 1
+var firstName:String = "Joseph"
+var lastName:String = "Smith"
+let gender:String = "Male"
+var age:Int = 18
+var cashOnHand: Double = 100.0
 
 print(firstName)
 print(lastName)
@@ -49,3 +49,7 @@ var myAge:Int = 18
 var myHeight:Float = 170.5
 var bankBalance:Double = 100000.4
 var isMarried:Bool = false
+var hasChildren = false
+
+//Challenge 2, Add respective data types to variables and constants in Challenge 1
+
