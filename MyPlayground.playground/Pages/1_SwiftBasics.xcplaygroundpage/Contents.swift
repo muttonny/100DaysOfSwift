@@ -24,7 +24,7 @@ stockPrice = 43
 
 //conatcnts
 
-let  lastname = "Smith"
+let lastname = "Smith"
 
 //Challenge 1
 var firstName: String = "Joseph"
@@ -137,6 +137,98 @@ let http200Status = (statusCode: 200, statusDesc: "OK")
 http200Status.statusCode
 http200Status.statusDesc
 
+//Optionals
+//Used in situations where there may be absence of a value
 
+let possibleNumber = "123"
+let convertedNumber = Int(possibleNumber)
+
+var serverResponseCode: Int? = 404 // serverResponseCode is an optional Int (Int?)
+
+serverResponseCode = nil // serverResponseCode contains no value
+
+var surveyAnswer: String? // surveyAnswer is an optional variable and is set to nil
+
+//If statements and forced unwrapping
+
+if convertedNumber != nil {
+    print("convertedNumber contains some integer value \(convertedNumber!)") //
+}
+
+//optional binding
+if let actualValue = Int(possibleNumber) {
+    print("The string \"\(possibleNumber)\" contains interger value of \(actualValue)")
+}else{
+    print("The string \"\(possibleNumber)\" could not be converted to interger")
+}
+
+let myNumber = Int(possibleNumber)
+
+if let myNumber = myNumber {
+    print("myNUmber is \(myNumber)")
+}
+
+//more than one condition in an if statement
+if let firstNumber = Int("4"), let secondNumber = Int("12"), firstNumber < secondNumber && secondNumber < 100 {
+    print("All conditions are true")
+}
+
+//Implicitly unwrapped optionals
+// optionals that will always have a value especially when a value is set on variable/constant declaration
+
+let possibleString: String? = "Optional string"
+let forcedString: String = possibleString! // requires ! to unwrap the optional string (forcifully unwrapping)
+
+let assumedString: String! = "An implicitly unwrapped optional string"
+let implicitString = assumedString   //no need to use !
+
+//Error Handling
+
+func canThrowError() throws {
+    
+}
+
+//catching an error in case it's thrown
+
+do {
+    
+    try canThrowError()
+    
+} catch {
+    //error was throen
+}
+
+func makeASandwich() throws {
+    
+}
+func eatSandwich() {}
+
+do {
+    try makeASandwich()
+    
+    eatSandwich()
+    
+} catch {
+    
+}
+
+//Assertions and preconditions
+
+//debugging with assertions
+
+
+let childAge = -3
+assert(childAge > 0, "A person's age cannot be 0")
+
+if childAge > 0 {
+    
+}else {
+    assertionFailure("A person's age cannot be zero")
+}
+
+
+//Enforcing Preconditions
+let index = 0
+precondition(index > 0, "Index must be greater than zero")
 
 
